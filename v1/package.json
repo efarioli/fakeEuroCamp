@@ -1,0 +1,28 @@
+{
+  "name": "v1",
+  "version": "1.0.0",
+  "description": "fakeCamp v1",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/efarioli/fakeEuroCamp.git"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "mongodb"
+  ],
+  "author": "Ezequiel Farioli",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/efarioli/fakeEuroCamp/issues"
+  },
+  "homepage": "https://github.com/efarioli/fakeEuroCamp#readme",
+  "dependencies": {
+    "ejs": "^2.5.6",
+    "express": "^4.15.2"
+  }
+}
