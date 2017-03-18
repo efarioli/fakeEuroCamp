@@ -8,6 +8,12 @@ app.set("view engine", "ejs");
 var campgrounds = [
     {name: "Salmon Creek", image: "https://c1.staticflickr.com/8/7218/7294909034_d1ecd2b447_b.jpg"},
     {name: "Granite Hill", image: "http://s0.geograph.org.uk/photos/04/42/044209_6d4a56bd.jpg"},
+    {name: "Mountain Goat's Rest", image: "https://upload.wikimedia.org/wikipedia/commons/6/67/Gallanach_Campsite_-_geograph.org.uk_-_36570.jpg"},
+    {name: "Salmon Creek", image: "https://c1.staticflickr.com/8/7218/7294909034_d1ecd2b447_b.jpg"},
+    {name: "Granite Hill", image: "http://s0.geograph.org.uk/photos/04/42/044209_6d4a56bd.jpg"},
+    {name: "Mountain Goat's Rest", image: "https://upload.wikimedia.org/wikipedia/commons/6/67/Gallanach_Campsite_-_geograph.org.uk_-_36570.jpg"},
+    {name: "Salmon Creek", image: "https://c1.staticflickr.com/8/7218/7294909034_d1ecd2b447_b.jpg"},
+    {name: "Granite Hill", image: "http://s0.geograph.org.uk/photos/04/42/044209_6d4a56bd.jpg"},
     {name: "Mountain Goat's Rest", image: "https://upload.wikimedia.org/wikipedia/commons/6/67/Gallanach_Campsite_-_geograph.org.uk_-_36570.jpg"}
     
     ];
