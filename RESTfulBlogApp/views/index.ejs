@@ -5,16 +5,16 @@
 <% blogs.forEach(function(blog) {  %>
     <div>
         <h2><%= blog.title %></h2>
-        <img src="<%=  blog.image  %>">
-        <span><%= blog.created %></span>
-        <p><%= blog.body %></p>
+        <img class="ui centered rounded image"  src="<%=  blog.image  %>">
+        <span><%= blog.created.toString().substring(0,21) %></span>
+        <p><%= blog.body.substring(0,99) %> ...</p>
+        <a href="/blogs/<%= blog._id %>">Read More</a>
 
 
     </div>
 
 <% }); %>
 
-<img src="http://1.bp.blogspot.com/-jjwz8SD3N0k/ViFjNRYCt9I/AAAAAAAAABc/aBAS4Ru-0wQ/s1600/images.jpg">
-
+ 
 
 <% include ./partials/footer %>
