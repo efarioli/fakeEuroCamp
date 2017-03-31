@@ -3,6 +3,11 @@
 <h1><%= campground.name %></h1>
 <img src="<%= campground.image %>"></img>
 <%= campground.description %>
-
+<% campground.comments.forEach(function(comment){ %>
+	<p>
+	<strong><%= comment.author %></strong> ppppp- <%= comment.text %>
+		
+	</p>
+<% }) %>
 <% include partials/footer  %>
 
