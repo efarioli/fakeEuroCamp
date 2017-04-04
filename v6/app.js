@@ -19,6 +19,20 @@ app.use(express.static(__dirname + "/public"));
 seedDB();
 
 
+//PASSPORT CONFIGURATION
+app.use(require("express-session")({
+  secret: "This is your last chance. After this, there is no turning back. You take the blue pill - the story ends, you wake up in your bed and believe whatever you want to believe. You take the red pill - you stay in Wonderland and I show you how deep the rabbit-hole goes.",
+  resave: false,
+  saveUninitialized: false
+}));
+
+app.use(passport.initialize());
+app.use(passport.session());
+passport.use(new LocalStrategy(User.authenticate()));
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
+
 //SCHEMA SETUP
 
 
@@ -125,6 +139,30 @@ app.post("/campgrounds/:id/comments", function(req, res){
   
 
 });
+
+//===============================================
+//AUTH  ROUTES
+//===============================================
+
+//SHow Register Form
+app.get("/register", function(req,res){
+  res.render("register");
+
+});
+
+//handle signup logic
+app.post("/register", function(req,res){
+  var newUser = new User({username: req.body.username});
+  User.register(newUser, req.body.password, function(err, user){
+    if (err){
+      console.log(err);
+      return res.render("register");
+    }
+    passport.authenticate("local")(req, res, function(){
+      res.redirect("/campgrounds");
+    });
+  })
+})
 
 //===============================================
 app.listen('3000', 'localhost', function() {
